@@ -25,7 +25,10 @@ namespace DZ_Cs_Cycles_28_03_2020
                 for(int i = A + 1; i < B; i++)
                 {
                     s += i;
-                    
+                    if(i % 2 != 0)
+                    {
+                        System.Console.WriteLine($"Nechetnie chisla mejdu {A} i {B} : {i}");
+                    }
                 }
                 System.Console.WriteLine($"Summa chisel mejdu {A} i {B} = {s}");
 
