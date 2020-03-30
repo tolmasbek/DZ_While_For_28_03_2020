@@ -54,9 +54,27 @@ namespace DZ_Cs_Cycles_28_03_2020
                         *            *        *     *         *           *         *   *
                         **************        ********       ***************          *
             */
+            // Прямоугольник
+            for(int i = 0; i <= 5; i++)
+            {
+                for(int j = 0; j <= 10; j++)
+                {
+                   System.Console.Write("*" + " ");
+                }
+                System.Console.WriteLine("*");
+            }
 
-            string zvezda = "*";
-
+            // Прямоугольный треугольник
+             for(int i = 0; i <= 10; i++)
+            {
+                for(int j = 1; j <= i; j++)
+                {
+                    System.Console.Write("*" + " ");
+                }
+                System.Console.WriteLine(" ");
+            }       
+            System.Console.WriteLine("///////////////////////");
+            
             /*
                 • Задание 4
                     o Начальный вклад в банке равен 1000 руб. Через каждый месяц размер вклада
@@ -65,7 +83,28 @@ namespace DZ_Cs_Cycles_28_03_2020
                     руб., и вывести найденное количество месяцев K (целое число) и итоговый размер
                     вклада S (вещественное число).
             */
+            /*
+            decimal n_vkl = 1000m;
+            decimal k_vkl = 1100m;
+            decimal P = 0;
+            int K;
+            decimal S = 1;
             
+            System.Console.Write($"Vvedite godovoy % (0 < P < 25), P = ");
+            P = decimal.Parse(Console.ReadLine());
+            
+            if((P - 25) <= 0)
+            {
+                K= (Convert.ToInt32(k_vkl) - Convert.ToInt32(n_vkl)) / Convert.ToInt32(P);
+                for(int i = 1; i <= K; i++)
+                {
+                    S = n_vkl + ((n_vkl * P) / 100);
+                    if(S == k_vkl) break;
+                         
+                }
+                System.Console.WriteLine($"Summa vklada za {K} mesyacev sostavit {S} rub.");
+            }
+*/
             Console.ReadKey();
         }
     }
