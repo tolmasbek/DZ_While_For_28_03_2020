@@ -77,6 +77,9 @@ namespace DZ_Cs_Cycles_28_03_2020
             
             // Равносторонний треугольник
             
+
+
+
             /*
                 • Задание 4
                     o Начальный вклад в банке равен 1000 руб. Через каждый месяц размер вклада
@@ -85,28 +88,29 @@ namespace DZ_Cs_Cycles_28_03_2020
                     руб., и вывести найденное количество месяцев K (целое число) и итоговый размер
                     вклада S (вещественное число).
             */
-            /*
-            decimal n_vkl = 1000m;
-            decimal k_vkl = 1100m;
-            decimal P = 0;
-            int K;
-            decimal S = 1;
+            ///
+            /// P = 3,50
+            /// K = 3     S = 1108,72   
+            ///   
+            /// 
+            float P = 0;
+            int K = 0;
+            float S = 1000f;
             
-            System.Console.Write($"Vvedite godovoy % (0 < P < 25), P = ");
-            P = decimal.Parse(Console.ReadLine());
-            
-            if((P - 25) <= 0)
+percent:    System.Console.Write("Vvedite godovoy % (0 < P < 25), P = ");
+            P = float.Parse(Console.ReadLine());
+            if((P - 25) <= 0){
+            while(S <= 1100)
             {
-                K= (Convert.ToInt32(k_vkl) - Convert.ToInt32(n_vkl)) / Convert.ToInt32(P);
-                for(int i = 1; i <= K; i++)
-                {
-                    S = n_vkl + ((n_vkl * P) / 100);
-                    if(S == k_vkl) break;
-                         
-                }
-                System.Console.WriteLine($"Summa vklada za {K} mesyacev sostavit {S} rub.");
+                S = S + ((S * P) / 100);
+                K++;
             }
-*/
+            System.Console.WriteLine($"Cherez {K} mesyacev razmer vklada previsit 1100 rub\ni itogoviy razmer vklada sostavit = {S}");
+            }
+            else{
+                System.Console.WriteLine($"P ne doljen previshat 25 % !!!");
+                goto percent;
+            }
             Console.ReadKey();
         }
     }
