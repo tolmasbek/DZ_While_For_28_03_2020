@@ -55,6 +55,7 @@ namespace DZ_Cs_Cycles_28_03_2020
                         **************        ********       ***************          *
             */
             // Прямоугольник
+            System.Console.WriteLine("///PRYAMOUGOLNIK///");
             for(int i = 0; i <= 5; i++)
             {
                 for(int j = 0; j <= 10; j++)
@@ -65,7 +66,9 @@ namespace DZ_Cs_Cycles_28_03_2020
             }
 
             // Прямоугольный треугольник
-             for(int i = 0; i <= 10; i++)
+            System.Console.WriteLine("///PRYAMOUGOLNIY TREUGOLNIK///");
+            
+            for(int i = 0; i <= 10; i++)
             {
                 for(int j = 1; j <= i; j++)
                 {
@@ -73,12 +76,21 @@ namespace DZ_Cs_Cycles_28_03_2020
                 }
                 System.Console.WriteLine(" ");
             }       
-            System.Console.WriteLine("///////////////////////");
             
             // Равносторонний треугольник
-            
+            System.Console.WriteLine("///RAVNOBEDRENNIY TREUGOLNIK///");
+            /// 
+            for(int i = 0; i < 9; i++)
+            {
+                for(int j = 1; j < 9 - i; j++)
+                    System.Console.Write(" ");
+                for(int j = 9 - i; j < 9 + i; j++)
+                    System.Console.Write("*");
+                    System.Console.WriteLine("*");
+            }
 
-
+            /// Ромб
+            System.Console.WriteLine("///ROMB///");
 
             /*
                 • Задание 4
@@ -111,6 +123,11 @@ percent:    System.Console.Write("Vvedite godovoy % (0 < P < 25), P = ");
                 System.Console.WriteLine($"P ne doljen previshat 25 % !!!");
                 goto percent;
             }
+
+            /////////////////////////////////////////////////////////////////////////////////////
+            /// Хотел сделать с for но не понял 
+            /// for(int i = 0; i <= 1100; i++) так правильно ?
+            /// 
             Console.ReadKey();
         }
     }
